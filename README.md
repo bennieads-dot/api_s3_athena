@@ -1,6 +1,9 @@
 # api_s3_athena
 This is a sample project I came up with to practice a simple data engineering pipeline and learn more about the following AWS services.
 
+
+  The lambda function 0 error handling, this was put together quickly and without the need to have in a prod environment.
+
 - IAM (Identity and Access Management) 🔑
 - Lambda (Serverless computing) 🤖
 - S3 (Object storage) 🪣
