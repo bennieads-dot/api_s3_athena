@@ -53,4 +53,4 @@ This is a sample project I came up with to practice a simple data engineering pi
   - Choose all data types
   - Tables Properties:
     - Key: skip.header.line.count, value: 1
-  - Once both tables are created, you should not be able to query against both tables
+  - Once both tables are created, you should be able to query against both tables
