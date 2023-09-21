@@ -5,6 +5,11 @@ import gc
 import os
 import requests
 
+'''
+This script doesnt have any error handling, its only purpose is to test and run manually in
+AWS lambda.
+'''
+
 
 def get_data(url):
     data = []
