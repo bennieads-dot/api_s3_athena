@@ -26,7 +26,7 @@ def write_csv(data, file):
     print(f'successfully wrote {len(data)} rows to {file}')
 
 
-def upload_to_s3(file,name):
+def upload_to_s3(file, name):
     access_key = os.getenv("S3_ACCESS_KEY_ID")
     secret_key = os.getenv("S3_SECRET_ACCESS_KEY")
     bucket_name = os.getenv("AWS_BUCKET_NAME")
@@ -38,6 +38,7 @@ def upload_to_s3(file,name):
     with open(file, 'rb') as data:
         s3.upload_fileobj(data, bucket_name, key)
     data.close()
+    print("uploaded to S3")
 
 
 def lambda_handler(event, context):
@@ -48,7 +49,6 @@ def lambda_handler(event, context):
 
     data = get_data(url)
     write_csv(data, file)
-    upload_to_s3(file,name)
-    
+    upload_to_s3(file, name)
+
     print("complete")
-    
